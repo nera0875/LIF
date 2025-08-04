@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Automatisation du CPF - Guide Complet</title>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4a6fa5;
+            --secondary-color: #6c9bd1;
+            --accent-color: #ff9e6d;
+            --text-color: #333;
+            --light-bg: #f8f9fa;
+            --white: #ffffff;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Lato', sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--light-bg);
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 2rem 0;
+            text-align: center;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 0.5rem;
+        }
+        
+        .subtitle {
+            font-size: 1.2rem;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        
+        .content {
+            padding: 2rem 0;
+        }
+        
+        .section {
+            background-color: var(--white);
+            border-radius: 10px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        
+        h2 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+            font-size: 1.8rem;
+            position: relative;
+            padding-left: 1rem;
+        }
+        
+        h2::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            height: 70%;
+            width: 5px;
+            background-color: var(--accent-color);
+            border-radius: 3px;
+        }
+        
+        .phase {
+            margin-bottom: 2rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        
+        .phase-number {
+            position: absolute;
+            left: -1.5rem;
+            top: 0;
+            background-color: var(--secondary-color);
+            color: white;
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+        
+        .brain-part {
+            background-color: var(--light-bg);
+            padding: 1rem;
+            border-radius: 8px;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--secondary-color);
+        }
+        
+        .brain-part h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+        
+        .feeling {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1rem;
+            padding: 0.8rem;
+            background-color: var(--light-bg);
+            border-radius: 8px;
+        }
+        
+        .feeling-icon {
+            font-size: 1.5rem;
+            margin-right: 1rem;
+            color: var(--accent-color);
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 1.5rem 0;
+            background-color: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        th, td {
+            padding: 1rem;
+            text-align: left;
+            border-bottom: 1px solid #eee;
+        }
+        
+        th {
+            background-color: var(--secondary-color);
+            color: white;
+            font-weight: 600;
+        }
+        
+        tr:last-child td {
+            border-bottom: none;
+        }
+        
+        .tip {
+            background-color: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 1rem;
+            margin: 1.5rem 0;
+            border-radius: 0 8px 8px 0;
+        }
+        
+        .hope {
+            background-color: #d4edda;
+            border-left: 4px solid #28a745;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 8px 8px 0;
+            font-size: 1.1rem;
+        }
+        
+        .hope-title {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            color: #155724;
+        }
+        
+        footer {
+            text-align: center;
+            padding: 1.5rem 0;
+            color: #777;
+            font-size: 0.9rem;
+        }
+        
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+            
+            .section {
+                padding: 1.5rem;
+            }
+            
+            table {
+                font-size: 0.9rem;
+            }
+            
+            th, td {
+                padding: 0.8rem 0.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Automatisation du CPF</h1>
+            <p class="subtitle">Comment votre cerveau passe du mode "urgence" au mode "pilote automatique"</p>
+        </div>
+    </header>
+    
+    <div class="container">
+        <div class="content">
+            <div class="section">
+                <h2>🧠 Les phases d'automatisation du CPF</h2>
+                
+                <div class="phase">
+                    <div class="phase-number">1</div>
+                    <h3>Phase initiale : surchauffe préfrontale</h3>
+                    <p><strong>Activation massive du CPF</strong> : vous utilisez consciemment toute votre capacité d'attention et de planification. Cela entraîne une surcharge → maux de tête, tension, sensation de "verrouillage".</p>
+                    <p><strong>Pas encore d'automatismes</strong> : chaque action, même simple, requiert un effort frontal. Le reste du cerveau reste en attente, sans circuits prêts à prendre le relais.</p>
+                </div>
+                
+                <div class="phase">
+                    <div class="phase-number">2</div>
+                    <h3>Phase de délégation progressive (1–3 semaines)</h3>
+                    <p><strong>Répétition & structuration</strong> : mise en place de routines (horaire fixe, check-lists, gestes ritualisés) qui conduisent à la myélinisation et à la consolidation synaptique dans les noyaux gris centraux.</p>
+                    
+                    <div class="brain-part">
+                        <h3>Ganglions de la base</h3>
+                        <p>Ils stockent les patterns moteurs et mentaux → ils commencent à exécuter les tâches répétées sans intervention du CPF.</p>
+                    </div>
+                    
+                    <div class="brain-part">
+                        <h3>Cervelet</h3>
+                        <p>Prend en charge la fluidité et la coordination, y compris dans les routines mentales (ex. passage d'une pensée à une autre).</p>
+                    </div>
+                </div>
+                
+                <div class="phase">
+                    <div class="phase-number">3</div>
+                    <h3>Transition vers l'automatisation (3–6 semaines)</h3>
+                    <p><strong>Supervision légère</strong> : le CPF ne fait plus tout le travail : il surveille, mais n'intervient qu'en cas d'imprévu.</p>
+                    
+                    <div class="brain-part">
+                        <h3>Réseau fronto-pariétal</h3>
+                        <p>Assure la transition entre contrôle conscient et routines automatiques, facilite le "switch" entre différentes tâches.</p>
+                    </div>
+                    
+                    <div class="brain-part">
+                        <h3>Default Mode Network (DMN)</h3>
+                        <p>Réapparaît pendant les pauses, la rêverie, et "nettoie" les associations mentales pour éviter la rigidité.</p>
+                    </div>
+                </div>
+                
+                <div class="phase">
+                    <div class="phase-number">4</div>
+                    <h3>État "pilote automatique" (> 6 semaines)</h3>
+                    
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Zone/Réseau</th>
+                                <th>Rôle principal</th>
+                                <th>Quand il intervient</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Ganglions de la base</td>
+                                <td>Habitudes et séquences automatisées</td>
+                                <td>Tâches routinières</td>
+                            </tr>
+                            <tr>
+                                <td>Cervelet</td>
+                                <td>Coordination fluide des actions</td>
+                                <td>Gestes, enchaînements mentaux</td>
+                            </tr>
+                            <tr>
+                                <td>Réseau fronto-pariétal</td>
+                                <td>Supervision implicite, ajustements</td>
+                                <td>Changements de contexte</td>
+                            </tr>
+                            <tr>
+                                <td>DMN (rêverie)</td>
+                                <td>Pause mentale, créativité, récupération</td>
+                                <td>Temps libre, micro-pauses</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    
+                    <p><strong>CPF en "veille active"</strong> : Maintient juste assez d'attention pour rester conscient, sans fatigue.</p>
+                    <p><strong>Flow naturel</strong> : L'état d'immersion profonde devient accessible à la demande, sans effort.</p>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>💫 Ce que vous allez ressentir</h2>
+                
+                <div class="feeling">
+                    <div class="feeling-icon">🧘</div>
+                    <div>
+                        <strong>Moins d'effort conscient</strong> pour démarrer ou maintenir votre concentration
+                    </div>
+                </div>
+                
+                <div class="feeling">
+                    <div class="feeling-icon">🌊</div>
+                    <div>
+                        <strong>Plus de fluidité et de "flow"</strong> spontané, sans tension frontale
+                    </div>
+                </div>
+                
+                <div class="feeling">
+                    <div class="feeling-icon">⚖️</div>
+                    <div>
+                        <strong>Un équilibre</strong> entre supervision légère du CPF et automatisme des autres circuits
+                    </div>
+                </div>
+                
+                <div class="feeling">
+                    <div class="feeling-icon">🏃</div>
+                    <div>
+                        <strong>Temps de réaction plus rapide</strong>, enchaînement de tâches sans blocage
+                    </div>
+                </div>
+                
+                <div class="feeling">
+                    <div class="feeling-icon">💡</div>
+                    <div>
+                        <strong>Créativité et pauses naturelles</strong> (le DMN reprend sa place)
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h2>🛠️ Comment entretenir et accélérer ce processus</h2>
+                
+                <div class="brain-part">
+                    <h3>Routines cohérentes</h3>
+                    <p>Mémos visuels, rappels, structure de journée prévisible pour renforcer les circuits automatiques.</p>
+                </div>
+                
+                <div class="brain-part">
+                    <h3>Pauses programmées</h3>
+                    <p>5 minutes toutes les 25 minutes pour laisser le DMN fonctionner et récupérer le CPF.</p>
+                </div>
+                
+                <div class="brain-part">
+                    <h3>Variété contrôlée</h3>
+                    <p>Alterner tâches faciles/difficiles pour ne pas recharger le CPF et permettre aux autres réseaux de fonctionner.</p>
+                </div>
+                
+                <div class="brain-part">
+                    <h3>Feedback immédiat</h3>
+                    <p>Coche, mini-récompenses pour renforcer le circuit basal et accélérer l'automatisation.</p>
+                </div>
+                
+                <div class="brain-part">
+                    <h3>Soutien neurochimique</h3>
+                    <p>Agmatine, oméga-3, magnésium en soirée pour optimiser le fonctionnement cérébral.</p>
+                </div>
+                
+                <div class="tip">
+                    <strong>💡 Conseil pratique :</strong> Commencez par automatiser une seule routine par semaine pour ne pas surcharger votre CPF. Une fois stabilisée, passez à la suivante.
+                </div>
+            </div>
+            
+            <div class="hope">
+                <div class="hope-title">🔑 Espoir et confiance</div>
+                <p>Votre cerveau va passer d'un mode "tout frontal" à un système fluide et collaboratif, où chaque réseau joue son rôle. Avec le temps et la bonne structure (routines, pauses, soutien), votre CPF ne sera plus en mode "urgence" en permanence, mais en supervision légère, vous donnant liberté et confort.</p>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <p>Document informatif sur l'automatisation du CPF - Basé sur les neurosciences cognitives</p>
+    </footer>
+</body>
+</html>
