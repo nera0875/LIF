@@ -1,0 +1,1145 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide Complet des Stimuli du Cortex Préfrontal</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            overflow: hidden;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 40px 30px;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-size: 2.5em;
+            font-weight: 700;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.1em;
+            opacity: 0.9;
+            font-weight: 300;
+        }
+
+        .content {
+            padding: 40px 30px;
+        }
+
+        .intro {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border-left: 4px solid #667eea;
+        }
+
+        .intro h2 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.4em;
+        }
+
+        .stimulus {
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 12px;
+            margin-bottom: 25px;
+            overflow: hidden;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .stimulus:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+        }
+
+        .stimulus-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 25px;
+            font-size: 1.2em;
+            font-weight: 600;
+        }
+
+        .stimulus-content {
+            padding: 25px;
+        }
+
+        .why-section, .cut-section {
+            margin-bottom: 20px;
+        }
+
+        .why-section h4, .cut-section h4 {
+            color: #667eea;
+            font-size: 1.1em;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .why-section h4::before {
+            content: "❓";
+            margin-right: 8px;
+            font-size: 1.2em;
+        }
+
+        .cut-section h4::before {
+            content: "✂️";
+            margin-right: 8px;
+            font-size: 1.2em;
+        }
+
+        .why-section p, .cut-section ul {
+            color: #555;
+            line-height: 1.7;
+        }
+
+        .cut-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .cut-section li {
+            padding: 8px 0;
+            border-bottom: 1px solid #f0f0f0;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .cut-section li:last-child {
+            border-bottom: none;
+        }
+
+        .cut-section li::before {
+            content: "✓";
+            color: #28a745;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .conclusion {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-top: 30px;
+        }
+
+        .conclusion h3 {
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .conclusion ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .conclusion li {
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.2);
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .conclusion li:last-child {
+            border-bottom: none;
+        }
+
+        .conclusion li::before {
+            content: "💡";
+            position: absolute;
+            left: 0;
+        }
+
+        .highlight {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+        }
+
+        .highlight strong {
+            color: #856404;
+        }
+
+        /* Styles pour les sections pliables */
+        .collapsible {
+            background: white;
+            border: 1px solid #e9ecef;
+            border-radius: 12px;
+            margin-bottom: 15px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .collapsible-header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 20px 25px;
+            font-size: 1.2em;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s ease;
+        }
+
+        .collapsible-header:hover {
+            background: linear-gradient(135deg, #5a6fd8 0%, #6a4190 100%);
+        }
+
+        .collapsible-header::after {
+            content: "▼";
+            font-size: 0.8em;
+            transition: transform 0.3s ease;
+        }
+
+        .collapsible.active .collapsible-header::after {
+            transform: rotate(180deg);
+        }
+
+        .collapsible-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+                 .collapsible.active .collapsible-content {
+             max-height: 2000px;
+         }
+
+        .collapsible-content-inner {
+            padding: 25px;
+        }
+
+        /* Navigation rapide */
+        .quick-nav {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 30px;
+            border-left: 4px solid #667eea;
+        }
+
+        .quick-nav h3 {
+            color: #667eea;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+
+        .nav-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 10px;
+        }
+
+        .nav-item {
+            background: white;
+            padding: 10px 15px;
+            border-radius: 8px;
+            border: 1px solid #e9ecef;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            text-align: center;
+            font-size: 0.9em;
+        }
+
+        .nav-item:hover {
+            background: #667eea;
+            color: white;
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            body {
+                padding: 10px;
+            }
+            
+            .header h1 {
+                font-size: 2em;
+            }
+            
+            .content {
+                padding: 20px 15px;
+            }
+            
+            .collapsible-content-inner {
+                padding: 20px;
+            }
+
+                         .nav-grid {
+                 grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+             }
+
+             /* Styles pour le tableau responsive */
+             table {
+                 font-size: 0.9em;
+             }
+             
+             table td, table th {
+                 padding: 8px !important;
+                 font-size: 0.85em;
+             }
+         }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Guide Complet des Stimuli du Cortex Préfrontal</h1>
+            <p>Méthodes pour réduire et neutraliser les facteurs d'activation</p>
+        </div>
+
+        <div class="content">
+            <div class="intro">
+                <h2>Préservation de l'Énergie Préfrontale</h2>
+                <p>Ce guide identifie les 18 principaux stimuli qui activent votre cortex préfrontal (CPF) et propose des méthodes concrètes pour les réduire ou les neutraliser. Chaque facteur est analysé avec ses mécanismes d'action et ses solutions pratiques.</p>
+            </div>
+
+            <!-- Navigation rapide -->
+            <div class="quick-nav">
+                <h3>Navigation Rapide</h3>
+                <div class="nav-grid">
+                    <div class="nav-item" onclick="toggleSection('protocole')">📅 Protocole Journée</div>
+                    <div class="nav-item" onclick="toggleSection('reconnaissance')">🔍 Reconnaissance</div>
+                    <div class="nav-item" onclick="toggleSection('chunking')">🧠 Chunking</div>
+                    <div class="nav-item" onclick="toggleSection('musk')">🚀 Musk Chunking</div>
+                    <div class="nav-item" onclick="toggleSection('bruit')">1. Bruit</div>
+                    <div class="nav-item" onclick="toggleSection('lumiere')">2. Lumière</div>
+                    <div class="nav-item" onclick="toggleSection('sourire')">3. Sourire</div>
+                    <div class="nav-item" onclick="toggleSection('yeux')">4. Yeux</div>
+                    <div class="nav-item" onclick="toggleSection('alimentation')">5. Alimentation</div>
+                    <div class="nav-item" onclick="toggleSection('notifications')">6. Notifications</div>
+                    <div class="nav-item" onclick="toggleSection('multitache')">7. Multitâche</div>
+                    <div class="nav-item" onclick="toggleSection('decisions')">8. Décisions</div>
+                    <div class="nav-item" onclick="toggleSection('visuel')">9. Contenu Visuel</div>
+                    <div class="nav-item" onclick="toggleSection('stress')">10. Stress</div>
+                    <div class="nav-item" onclick="toggleSection('posture')">11. Posture</div>
+                    <div class="nav-item" onclick="toggleSection('temperature')">12. Température</div>
+                    <div class="nav-item" onclick="toggleSection('tension')">13. Tension</div>
+                    <div class="nav-item" onclick="toggleSection('vestibulaire')">14. Vestibulaire</div>
+                    <div class="nav-item" onclick="toggleSection('cognitive')">15. Cognitive</div>
+                    <div class="nav-item" onclick="toggleSection('digitale')">16. Digitale</div>
+                    <div class="nav-item" onclick="toggleSection('social')">17. Social</div>
+                    <div class="nav-item" onclick="toggleSection('interface')">18. Interface</div>
+                </div>
+            </div>
+
+            <!-- Section Protocole Journée Type -->
+            <div class="collapsible" id="protocole">
+                <div class="collapsible-header" onclick="toggleSection('protocole')">
+                    📅 Protocole Journée Type (08h00-20h00)
+                </div>
+                <div class="collapsible-content">
+                    <div class="collapsible-content-inner">
+                        <div class="why-section">
+                            <h4>Objectif</h4>
+                            <p>Conditionner votre CPF à basculer le plus tôt possible en « mode automatique » et le maintenir « froid » (non sollicité inutilement). Ce protocole ajoute rituels, signaux de coupure, micro-pauses et neuromodulations.</p>
+                        </div>
+
+                                                 <div class="cut-section">
+                             <h4>Protocole Détaillé</h4>
+                             <div style="overflow-x: auto; max-width: 100%;">
+                                 <table style="width: 100%; min-width: 800px; border-collapse: collapse; margin: 15px 0;">
+                                    <thead>
+                                        <tr style="background: #667eea; color: white;">
+                                            <th style="padding: 12px; border: 1px solid #ddd; text-align: left;">Heure</th>
+                                            <th style="padding: 12px; border: 1px solid #ddd; text-align: left;">Action</th>
+                                            <th style="padding: 12px; border: 1px solid #ddd; text-align: left;">Objectif CPF-cold</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">08h00</td>
+                                            <td style="padding: 10px; border: 1px solid #ddd;">
+                                                <strong>Réveil & hydratation</strong><br>
+                                                – 300 mL d'eau tiède + pincée de sel marin<br>
+                                                – 10 g d'esters cétoniques
+                                            </td>
+                                            <td style="padding: 10px; border: 1px solid #ddd;">Activer métabolisme alternatif, éviter pic de glucose frontal</td>
+                                        </tr>
+                                        <tr style="background: #f9f9f9;">
+                                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">08h05</td>
+                                            <td style="padding: 10px; border: 1px solid #ddd;">
+                                                <strong>Douche contrastée</strong><br>
+                                                – 1 min chaud / 30 s froid nuque
+                                            </td>
+                                            <td style="padding: 10px; border: 1px solid #ddd;">Signal sensoriel fort pour basculement automatic→sensoriomoteur</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">08h10</td>
+                                            <td style="padding: 10px; border: 1px solid #ddd;">
+                                                <strong>Compléments matinaux</strong><br>
+                                                – NAC 600 mg, Vit C 500 mg + zinc 15 mg, L-théanine 200 mg
+                                            </td>
+                                            <td style="padding: 10px; border: 1px solid #ddd;">Limiter stress oxydatif, foyer glutamate, baisser excitabilité de fond</td>
+                                        </tr>
+                                        <tr style="background: #f9f9f9;">
+                                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">08h15</td>
+                                            <td style="padding: 10px; border: 1px solid #ddd;">
+                                                <strong>Méditation orientée externe (5 min)</strong><br>
+                                                – Focalisation sur un son unique ou la lumière du jour
+                                            </td>
+                                            <td style="padding: 10px; border: 1px solid #ddd;">Entraîner réseau de salience et pariétal, pas CPF</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">08h20</td>
+                                            <td style="padding: 10px; border: 1px solid #ddd;">
+                                                <strong>Prise de Concerta 54 mg + rituel d'entrée</strong><br>
+                                                – Gorgée d'eau + check-list 3 points
+                                            </td>
+                                            <td style="padding: 10px; border: 1px solid #ddd;">Conditionner CPF à reconnaître le début de session</td>
+                                        </tr>
+                                        <tr style="background: #f9f9f9;">
+                                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">08h25-09h00</td>
+                                            <td style="padding: 10px; border: 1px solid #ddd;">
+                                                <strong>Pomodoro 35 min</strong><br>
+                                                – Travail en tâche unique (IA)
+                                            </td>
+                                            <td style="padding: 10px; border: 1px solid #ddd;">Chunking initial ; CPF engagé mais dosage soutenu</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">09h00</td>
+                                            <td style="padding: 10px; border: 1px solid #ddd;">
+                                                <strong>Micro-pause 5 min</strong><br>
+                                                1. Tapotements front tempes (30 s)<br>
+                                                2. Cohérence cardiaque (6 s inspi/6 s expi, 2 min)<br>
+                                                3. Pression pouce/index (30 s)
+                                            </td>
+                                            <td style="padding: 10px; border: 1px solid #ddd;">Forcer switch bottom-up si CPF encore chaud</td>
+                                        </tr>
+                                        <tr style="background: #f9f9f9;">
+                                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">09h05-09h40</td>
+                                            <td style="padding: 10px; border: 1px solid #ddd;">
+                                                <strong>Pomodoro 35 min</strong>
+                                            </td>
+                                            <td style="padding: 10px; border: 1px solid #ddd;">Renforcement chunking, transfert progressif vers striatum</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">09h40</td>
+                                            <td style="padding: 10px; border: 1px solid #ddd;">
+                                                <strong>Signal de coupure</strong><br>
+                                                – Son de clochette → 1 min de ball-antistress + clignements forcés
+                                            </td>
+                                            <td style="padding: 10px; border: 1px solid #ddd;">Vérifier si CPF restait froid. Si non, refaire palming ou pression</td>
+                                        </tr>
+                                        <tr style="background: #f9f9f9;">
+                                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">09h45-10h20</td>
+                                            <td style="padding: 10px; border: 1px solid #ddd;">
+                                                <strong>Pomodoro 35 min</strong>
+                                            </td>
+                                            <td style="padding: 10px; border: 1px solid #ddd;"></td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">10h20</td>
+                                            <td style="padding: 10px; border: 1px solid #ddd;">
+                                                <strong>tACS alpha 10 min (8–12 Hz) sur DLPFC</strong>
+                                            </td>
+                                            <td style="padding: 10px; border: 1px solid #ddd;">Abaisser le gain frontal en continu</td>
+                                        </tr>
+                                        <tr style="background: #f9f9f9;">
+                                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">10h30</td>
+                                            <td style="padding: 10px; border: 1px solid #ddd;">
+                                                <strong>Pause longue 15 min</strong><br>
+                                                – Marche douce + eau + 1 petit encas IG moyen
+                                            </td>
+                                            <td style="padding: 10px; border: 1px solid #ddd;">Rechargement métabolique</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">10h45-12h00</td>
+                                            <td style="padding: 10px; border: 1px solid #ddd;">
+                                                <strong>Deux cycles Pomodoro 35 min on / 5 min off</strong><br>
+                                                (press. doigt, cohérence cardiaque)
+                                            </td>
+                                            <td style="padding: 10px; border: 1px solid #ddd;">Stabilisation du mode auto ; CPF se décharge progressivement</td>
+                                        </tr>
+                                        <tr style="background: #f9f9f9;">
+                                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">12h00-13h00</td>
+                                            <td style="padding: 10px; border: 1px solid #ddd;">
+                                                <strong>Déjeuner & récupération</strong><br>
+                                                – Protéines + légumes + quinoa + Oméga-3 1 000 mg<br>
+                                                – 10 min de biofeedback HRV
+                                            </td>
+                                            <td style="padding: 10px; border: 1px solid #ddd;">Réduire cortisol, reposer front, préparer la 2ᵉ moitié de journée</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">13h00-15h00</td>
+                                            <td style="padding: 10px; border: 1px solid #ddd;">
+                                                <strong>Blocs de travail 40 min / pause 5 min</strong><br>
+                                                – À chaque pause : auto-massage tempes + cohérence cardiaque
+                                            </td>
+                                            <td style="padding: 10px; border: 1px solid #ddd;">Allonger progressivement sans réchauffer le CPF</td>
+                                        </tr>
+                                        <tr style="background: #f9f9f9;">
+                                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">15h00</td>
+                                            <td style="padding: 10px; border: 1px solid #ddd;">
+                                                <strong>taVNS 15 min (auriculaire)</strong>
+                                            </td>
+                                            <td style="padding: 10px; border: 1px solid #ddd;">Basculer en parasympathique, abaisser tonus frontal</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">15h15-17h00</td>
+                                            <td style="padding: 10px; border: 1px solid #ddd;">
+                                                <strong>Blocs de travail 45 min / pause 5 min</strong>
+                                            </td>
+                                            <td style="padding: 10px; border: 1px solid #ddd;">Poussée de volume cognitif en mode auto</td>
+                                        </tr>
+                                        <tr style="background: #f9f9f9;">
+                                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">17h00-17h30</td>
+                                            <td style="padding: 10px; border: 1px solid #ddd;">
+                                                <strong>Micro-sieste (10–15 min) ou relaxation guidée + tPBM</strong><br>
+                                                (infrarouge LED, 10 min)
+                                            </td>
+                                            <td style="padding: 10px; border: 1px solid #ddd;">Refaire descendre toute activation résiduelle du CPF</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">17h30-19h00</td>
+                                            <td style="padding: 10px; border: 1px solid #ddd;">
+                                                <strong>Blocs de travail 50 min / pause 5 min</strong>
+                                            </td>
+                                            <td style="padding: 10px; border: 1px solid #ddd;">Ultime phase de travail intensif, CPF en pilote auto</td>
+                                        </tr>
+                                        <tr style="background: #f9f9f9;">
+                                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">19h00-19h30</td>
+                                            <td style="padding: 10px; border: 1px solid #ddd;">
+                                                <strong>Sport doux ou yoga tonic (20 min) + étirements frontaux</strong>
+                                            </td>
+                                            <td style="padding: 10px; border: 1px solid #ddd;">Améliorer couplage neuro-vasculaire, décharger front et mâchoire</td>
+                                        </tr>
+                                        <tr>
+                                            <td style="padding: 10px; border: 1px solid #ddd; font-weight: bold;">19h30-20h00</td>
+                                            <td style="padding: 10px; border: 1px solid #ddd;">
+                                                <strong>Rituel de clôture</strong><br>
+                                                – Boisson non-caféinée + 5 min cohérence cardiaque + peloton de relaxation frontale (palming + compresse froide)
+                                            </td>
+                                            <td style="padding: 10px; border: 1px solid #ddd;">Vérifier la « température CPF » : s'il reste froid, mission accomplie ! Sinon, refaire 2 min de tACS ou palming</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="why-section">
+                            <h4>Décider que le CPF « lâche »</h4>
+                            <p><strong>Critère principal :</strong> absence de sensation de chaleur frontale et capacité à relâcher spontanément la contraction musculaire du front et des yeux durant la pause.</p>
+                            
+                            <h4>Contrôle rapide (à chaque micro-pause) :</h4>
+                            <ol>
+                                <li>Posez deux doigts sur les tempes</li>
+                                <li>Restez immobile 5 s</li>
+                                <li>Si vous ne sentez pas de tension ni de chaleur, considérez le CPF « cold » et relancez le cycle.</li>
+                                <li>Sinon, lancez immédiatement votre micro-rituel de coupure (palming, tDCS léger, pressing).</li>
+                            </ol>
+                        </div>
+
+                        <div class="cut-section">
+                            <h4>Résultat Attendu</h4>
+                            <p>En suivant ce protocole rigoureusement, vous conditionnez votre cerveau à décharger au plus vite son CPF, à passer en mode automatique et à garder votre front « froid » jusqu'à 20h00, même après une journée intensive en IA.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Section Reconnaissance -->
+            <div class="collapsible" id="reconnaissance">
+                <div class="collapsible-header" onclick="toggleSection('reconnaissance')">
+                    🔍 Comment reconnaître la bascule ?
+                </div>
+                <div class="collapsible-content">
+                    <div class="collapsible-content-inner">
+                        <div class="why-section">
+                            <h4>Physiquement</h4>
+                            <ul>
+                                <li>Tension frontale accrue, crispations musculaires, accélération du rythme cardiaque</li>
+                                <li>Sensation de « cerveau qui chauffe », difficulté à lâcher prise</li>
+                            </ul>
+                        </div>
+                        <div class="cut-section">
+                            <h4>Cognitivement</h4>
+                            <ul>
+                                <li>Pensées focalisées sur la tâche, perte de la conscience du temps</li>
+                                <li>Ruminations internes si conflit non résolu (ex. « Pourquoi ça ne marche pas ? »)</li>
+                            </ul>
+                        </div>
+                        <div class="why-section">
+                            <h4>Comportementalement</h4>
+                            <ul>
+                                <li>Rigidité dans la suite d'actions, persistance sur un point même mineur</li>
+                                <li>Moindre réceptivité aux indices externes (alarm, pause)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="collapsible" id="chunking">
+                <div class="collapsible-header" onclick="toggleSection('chunking')">
+                    🚀 Mécanisme de « chunking » et bascule automatique du CPF
+                </div>
+                <div class="collapsible-content">
+                    <div class="collapsible-content-inner">
+                        <div class="why-section">
+                            <h4>Mécanisme du Chunking</h4>
+                            <p>Le chunking est un processus cognitif qui permet de regrouper plusieurs éléments d'information en unités plus grandes et plus faciles à traiter. Ce mécanisme est crucial pour la bascule automatique du CPF.</p>
+                        </div>
+                        <div class="cut-section">
+                            <h4>Processus de Bascule</h4>
+                            <ul>
+                                <li><strong>Phase 1 - Encodage initial :</strong> Le CPF traite activement chaque élément de la tâche</li>
+                                <li><strong>Phase 2 - Répétition :</strong> Les mêmes patterns se répètent, créant des associations</li>
+                                <li><strong>Phase 3 - Consolidation :</strong> Les patterns deviennent automatiques via le striatum</li>
+                                <li><strong>Phase 4 - Bascule :</strong> Le CPF se désengage, le striatum prend le relais</li>
+                            </ul>
+                        </div>
+                        <div class="why-section">
+                            <h4>Signaux de Bascule</h4>
+                            <ul>
+                                <li>Réduction de la tension frontale</li>
+                                <li>Fluidité accrue dans l'exécution</li>
+                                <li>Diminution de la conscience du temps</li>
+                                <li>Moins d'effort mental conscient</li>
+                            </ul>
+                        </div>
+                        <div class="cut-section">
+                            <h4>Techniques d'Accélération</h4>
+                            <ul>
+                                <li><strong>Répétition structurée :</strong> Même séquence, même timing</li>
+                                <li><strong>Signaux de début/fin :</strong> Rituels pour marquer les transitions</li>
+                                <li><strong>Micro-pauses :</strong> Permettent la consolidation</li>
+                                <li><strong>Feedback immédiat :</strong> Renforce les patterns</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="collapsible" id="musk">
+                <div class="collapsible-header" onclick="toggleSection('musk')">
+                    🚀 Musk Chunking - Application pratique par Elon Musk
+                </div>
+                <div class="collapsible-content">
+                    <div class="collapsible-content-inner">
+                        <div class="why-section">
+                            <h4>Application pratique par Elon Musk</h4>
+                            <p>Elon Musk applique en pratique plusieurs des principes de « chunking » et de limitation des sollicitations frontales pour préserver son énergie mentale. Il ne parle pas explicitement de « CPF », mais ses routines révèlent qu'il a instinctivement compris qu'il fallait minimiser les décisions et automatiser les gestes.</p>
+                        </div>
+                        <div class="cut-section">
+                            <h4>Principes appliqués par Musk</h4>
+                            <ul>
+                                <li><strong>Uniforme vestimentaire :</strong> Garde-robe identique pour éliminer les choix vestimentaires quotidiens</li>
+                                <li><strong>Routines strictes :</strong> Horaires fixes et séquences répétitives pour automatiser les transitions</li>
+                                <li><strong>Environnement contrôlé :</strong> Espaces de travail optimisés pour réduire les stimuli parasites</li>
+                                <li><strong>Délégation systématique :</strong> Confie les décisions répétitives à des systèmes ou collaborateurs</li>
+                                <li><strong>Focus sur l'essentiel :</strong> Priorise uniquement les décisions stratégiques majeures</li>
+                            </ul>
+                        </div>
+                        <div class="why-section">
+                            <h4>Méthodes spécifiques</h4>
+                            <ul>
+                                <li><strong>Time-blocking extrême :</strong> Divise sa journée en blocs de 5 minutes pour maximiser l'efficacité</li>
+                                <li><strong>Communication directe :</strong> Évite les réunions inutiles et privilégie les échanges courts et ciblés</li>
+                                <li><strong>Automatisation technologique :</strong> Utilise des systèmes pour gérer les tâches répétitives</li>
+                                <li><strong>Protocoles de décision :</strong> Applique des frameworks prédéfinis pour les choix complexes</li>
+                            </ul>
+                        </div>
+                        <div class="cut-section">
+                            <h4>Résultats observés</h4>
+                            <ul>
+                                <li>Capacité à gérer simultanément plusieurs entreprises complexes</li>
+                                <li>Décisions rapides et cohérentes sur des sujets techniques complexes</li>
+                                <li>Endurance mentale exceptionnelle pour les sessions de travail prolongées</li>
+                                <li>Capacité d'innovation soutenue sur des périodes longues</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="collapsible" id="bruit">
+                <div class="collapsible-header" onclick="toggleSection('bruit')">
+                    1. Bruit
+                </div>
+                <div class="collapsible-content">
+                    <div class="collapsible-content-inner">
+                        <div class="why-section">
+                            <h4>Pourquoi</h4>
+                            <p>Les sons distracteurs sollicitent en permanence le filtrage attentionnel et la sélection auditive.</p>
+                        </div>
+                        <div class="cut-section">
+                            <h4>Couper</h4>
+                            <ul>
+                                <li>Casque antibruit actif ou bouchons d'oreille</li>
+                                <li>Bruit blanc doux ou musique ambiante neutre</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="collapsible" id="lumiere">
+                <div class="collapsible-header" onclick="toggleSection('lumiere')">
+                    2. Lumière
+                </div>
+                <div class="collapsible-content">
+                    <div class="collapsible-content-inner">
+                        <div class="why-section">
+                            <h4>Pourquoi</h4>
+                            <p>Variations d'intensité et de spectre (lumière bleue) imposent un ajustement cortical constant.</p>
+                        </div>
+                        <div class="cut-section">
+                            <h4>Couper</h4>
+                            <ul>
+                                <li>Filtre lumière bleue (lunettes, logiciel)</li>
+                                <li>Éclairage stable et indirect (lampes à intensité réglable)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="collapsible" id="sourire">
+                <div class="collapsible-header" onclick="toggleSection('sourire')">
+                    3. Sourire forcé
+                </div>
+                <div class="collapsible-content">
+                    <div class="collapsible-content-inner">
+                        <div class="why-section">
+                            <h4>Pourquoi</h4>
+                            <p>Sollicitation du nerf facial et modulation de l'arousal via des contractions musculaires.</p>
+                        </div>
+                        <div class="cut-section">
+                            <h4>Couper</h4>
+                            <ul>
+                                <li>Maintenir une expression neutre durant les pauses</li>
+                                <li>Privilégier un relâchement facial conscient</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="collapsible" id="yeux">
+                <div class="collapsible-header" onclick="toggleSection('yeux')">
+                    4. Yeux
+                </div>
+                <div class="collapsible-content">
+                    <div class="collapsible-content-inner">
+                        <div class="why-section">
+                            <h4>Pourquoi</h4>
+                            <p>Tension de convergence, effort de focalisation prolongée et clignements réduits.</p>
+                        </div>
+                        <div class="cut-section">
+                            <h4>Couper</h4>
+                            <ul>
+                                <li>Exercices de palming (paumes sur les yeux)</li>
+                                <li>Clignements forcés et focalisation à distance (20-20-20)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="collapsible" id="alimentation">
+                <div class="collapsible-header" onclick="toggleSection('alimentation')">
+                    5. Alimentation
+                </div>
+                <div class="collapsible-content">
+                    <div class="collapsible-content-inner">
+                        <div class="why-section">
+                            <h4>Pourquoi</h4>
+                            <p>Pics glycémiques et digestion mobilisent de l'énergie cérébrale et hormonale.</p>
+                        </div>
+                        <div class="cut-section">
+                            <h4>Couper</h4>
+                            <ul>
+                                <li>Repas à IG bas et fractionnés (avoine, protéines maigres)</li>
+                                <li>Hydratation continue, petites gorgées fréquentes</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="collapsible" id="notifications">
+                <div class="collapsible-header" onclick="toggleSection('notifications')">
+                    6. Notifications
+                </div>
+                <div class="collapsible-content">
+                    <div class="collapsible-content-inner">
+                        <div class="why-section">
+                            <h4>Pourquoi</h4>
+                            <p>Chaque alerte déclenche une réorientation attentionnelle coûteuse.</p>
+                        </div>
+                        <div class="cut-section">
+                            <h4>Couper</h4>
+                            <ul>
+                                <li>Mode avion ou « Ne pas déranger »</li>
+                                <li>Regrouper les vérifications (→ pomodoro)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="collapsible" id="multitache">
+                <div class="collapsible-header" onclick="toggleSection('multitache')">
+                    7. Multitâche
+                </div>
+                <div class="collapsible-content">
+                    <div class="collapsible-content-inner">
+                        <div class="why-section">
+                            <h4>Pourquoi</h4>
+                            <p>Basculement fréquent entre tâches multiplie les coûts exécutifs.</p>
+                        </div>
+                        <div class="cut-section">
+                            <h4>Couper</h4>
+                            <ul>
+                                <li>Travailler en focus-single task (pomodoro strict)</li>
+                                <li>Listes de priorité claires</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="collapsible" id="decisions">
+                <div class="collapsible-header" onclick="toggleSection('decisions')">
+                    8. Décisions mineures
+                </div>
+                <div class="collapsible-content">
+                    <div class="collapsible-content-inner">
+                        <div class="why-section">
+                            <h4>Pourquoi</h4>
+                            <p>Choix quotidiens (menus, interface, parfums) épuisent la volonté.</p>
+                        </div>
+                        <div class="cut-section">
+                            <h4>Couper</h4>
+                            <ul>
+                                <li>Uniformiser (tenue, repas, routines)</li>
+                                <li>Pré-décider la veille</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="collapsible" id="visuel">
+                <div class="collapsible-header" onclick="toggleSection('visuel')">
+                    9. Contenu visuel complexe
+                </div>
+                <div class="collapsible-content">
+                    <div class="collapsible-content-inner">
+                        <div class="why-section">
+                            <h4>Pourquoi</h4>
+                            <p>Interfaces surchargées, animations ou notifications visuelles obligent le CPF à filtrer.</p>
+                        </div>
+                        <div class="cut-section">
+                            <h4>Couper</h4>
+                            <ul>
+                                <li>Mode plein écran / lecteur minimaliste</li>
+                                <li>Fermer onglets et fenêtres inutiles</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="collapsible" id="stress">
+                <div class="collapsible-header" onclick="toggleSection('stress')">
+                    10. Stress émotionnel
+                </div>
+                <div class="collapsible-content">
+                    <div class="collapsible-content-inner">
+                        <div class="why-section">
+                            <h4>Pourquoi</h4>
+                            <p>Régulation des émotions et suppression de pensées intrusives mobilisent le CPF.</p>
+                        </div>
+                        <div class="cut-section">
+                            <h4>Couper</h4>
+                            <ul>
+                                <li>Cohérence cardiaque (6-6)</li>
+                                <li>Courtes méditations de pleine conscience</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="collapsible" id="posture">
+                <div class="collapsible-header" onclick="toggleSection('posture')">
+                    11. Posture et ergonomie
+                </div>
+                <div class="collapsible-content">
+                    <div class="collapsible-content-inner">
+                        <div class="why-section">
+                            <h4>Pourquoi</h4>
+                            <p>Une mauvaise posture génère des signaux de douleur/perception inconfort qui activent le réseau exécutif pour compenser.</p>
+                        </div>
+                        <div class="cut-section">
+                            <h4>Couper</h4>
+                            <ul>
+                                <li>Siège et écran bien positionnés</li>
+                                <li>Rappels de micro-étirements</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="collapsible" id="temperature">
+                <div class="collapsible-header" onclick="toggleSection('temperature')">
+                    12. Température ambiante
+                </div>
+                <div class="collapsible-content">
+                    <div class="collapsible-content-inner">
+                        <div class="why-section">
+                            <h4>Pourquoi</h4>
+                            <p>Inconfort thermique (chaud/froid) distrait le CPF par des ajustements physiologiques.</p>
+                        </div>
+                        <div class="cut-section">
+                            <h4>Couper</h4>
+                            <ul>
+                                <li>T° stable (22–24 °C)</li>
+                                <li>Ventilation douce ou chauffages localisés</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="collapsible" id="tension">
+                <div class="collapsible-header" onclick="toggleSection('tension')">
+                    13. Tension musculaire
+                </div>
+                <div class="collapsible-content">
+                    <div class="collapsible-content-inner">
+                        <div class="why-section">
+                            <h4>Pourquoi</h4>
+                            <p>Crispations involontaires (frontalis, masséter) envoient des signaux nociceptifs.</p>
+                        </div>
+                        <div class="cut-section">
+                            <h4>Couper</h4>
+                            <ul>
+                                <li>Auto-massage (tempes, mâchoire)</li>
+                                <li>Exercices de relâchement isométrique</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="collapsible" id="vestibulaire">
+                <div class="collapsible-header" onclick="toggleSection('vestibulaire')">
+                    14. Stimulation vestibulaire
+                </div>
+                <div class="collapsible-content">
+                    <div class="collapsible-content-inner">
+                        <div class="why-section">
+                            <h4>Pourquoi</h4>
+                            <p>Déséquilibres et mouvements imprévus nécessitent une réorientation posturale coûteuse.</p>
+                        </div>
+                        <div class="cut-section">
+                            <h4>Couper</h4>
+                            <ul>
+                                <li>Position assise stable</li>
+                                <li>Jeux de balancement contrôlé pour recalibrage</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="collapsible" id="cognitive">
+                <div class="collapsible-header" onclick="toggleSection('cognitive')">
+                    15. Charge cognitive interne
+                </div>
+                <div class="collapsible-content">
+                    <div class="collapsible-content-inner">
+                        <div class="why-section">
+                            <h4>Pourquoi</h4>
+                            <p>Ruminations et DMN activé sans tâche externe.</p>
+                        </div>
+                        <div class="cut-section">
+                            <h4>Couper</h4>
+                            <ul>
+                                <li>Méditation flash orientée (son unique)</li>
+                                <li>Biofeedback HRV</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="collapsible" id="digitale">
+                <div class="collapsible-header" onclick="toggleSection('digitale')">
+                    16. Pression digitale/gestuelle
+                </div>
+                <div class="collapsible-content">
+                    <div class="collapsible-content-inner">
+                        <div class="why-section">
+                            <h4>Pourquoi</h4>
+                            <p>Même de légères stimulations tactiles changent le focus sensoriel.</p>
+                        </div>
+                        <div class="cut-section">
+                            <h4>Couper</h4>
+                            <ul>
+                                <li>Appuyer sur un point neutre (galet lisse)</li>
+                                <li>Ancrage gestuel conditionné</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="collapsible" id="social">
+                <div class="collapsible-header" onclick="toggleSection('social')">
+                    17. Interactions sociales
+                </div>
+                <div class="collapsible-content">
+                    <div class="collapsible-content-inner">
+                        <div class="why-section">
+                            <h4>Pourquoi</h4>
+                            <p>Perception et réaction aux signaux émotionnels d'autrui sollicitent les fonctions exécutives.</p>
+                        </div>
+                        <div class="cut-section">
+                            <h4>Couper</h4>
+                            <ul>
+                                <li>Moments « off » sans écran ni appel</li>
+                                <li>Bulletining social (notes rapides plutôt que discussions longues)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="collapsible" id="interface">
+                <div class="collapsible-header" onclick="toggleSection('interface')">
+                    18. Rituel d'interface
+                </div>
+                <div class="collapsible-content">
+                    <div class="collapsible-content-inner">
+                        <div class="why-section">
+                            <h4>Pourquoi</h4>
+                            <p>Navigation web et menus multiples nécessitent des choix à chaque clic.</p>
+                        </div>
+                        <div class="cut-section">
+                            <h4>Couper</h4>
+                            <ul>
+                                <li>Utiliser des bookmarks fixes</li>
+                                <li>Travailler avec un seul outil/une seule fenêtre à la fois</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="highlight">
+                <strong>Conseil pratique :</strong> Pour chacun de ces facteurs, identifiez votre <strong>signal de coupure CPF</strong> (son, geste, micro-pause) et déclenchez-le dès que le stimulus apparaît.
+            </div>
+
+            <div class="conclusion">
+                <h3>Recommandations Finales</h3>
+                <ul>
+                    <li>Maintenez un <strong>journal de bord</strong> pour mesurer l'impact réel et affiner votre protocole jour après jour</li>
+                    <li>Avec ce guide, vous disposez d'un panorama exhaustif pour <strong>préserver votre énergie préfrontale</strong> au quotidien</li>
+                    <li>Commencez par identifier vos 3 stimuli les plus fréquents et appliquez les solutions correspondantes</li>
+                    <li>Évaluez régulièrement l'efficacité de vos stratégies et ajustez selon vos besoins</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Fonction pour basculer l'état des sections pliables
+        function toggleSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            const isActive = section.classList.contains('active');
+            
+            // Fermer toutes les sections
+            document.querySelectorAll('.collapsible').forEach(collapsible => {
+                collapsible.classList.remove('active');
+            });
+            
+                         // Ouvrir la section cliquée si elle n'était pas active
+             if (!isActive) {
+                 section.classList.add('active');
+                 // Faire défiler vers la section et rester en haut
+                 setTimeout(() => {
+                     section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                 }, 100);
+             }
+        }
+
+        // Ouvrir la première section par défaut
+        document.addEventListener('DOMContentLoaded', function() {
+            // Optionnel : ouvrir la première section au chargement
+            // toggleSection('bruit');
+        });
+
+        // Ajouter des raccourcis clavier
+        document.addEventListener('keydown', function(e) {
+            // Touche P pour la section Protocole
+            if (e.key.toLowerCase() === 'p') {
+                toggleSection('protocole');
+            }
+            // Touche R pour la section Reconnaissance
+            if (e.key.toLowerCase() === 'r') {
+                toggleSection('reconnaissance');
+            }
+            // Touche C pour la section Chunking
+            if (e.key.toLowerCase() === 'c') {
+                toggleSection('chunking');
+            }
+            // Touche M pour la section Musk Chunking
+            if (e.key.toLowerCase() === 'm') {
+                toggleSection('musk');
+            }
+            // Touches 1-9 pour les sections 1-9
+            if (e.key >= '1' && e.key <= '9') {
+                const sections = ['bruit', 'lumiere', 'sourire', 'yeux', 'alimentation', 'notifications', 'multitache', 'decisions', 'visuel'];
+                const index = parseInt(e.key) - 1;
+                if (sections[index]) {
+                    toggleSection(sections[index]);
+                }
+            }
+            // Touches 0 pour la section 10
+            if (e.key === '0') {
+                toggleSection('stress');
+            }
+        });
+    </script>
+</body>
+</html> 
