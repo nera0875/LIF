@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Guide NMDA & Glutamate — Agmatine, NAC, Huperzine A, Lithium Orotate</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: #ffffff;
+      --card: #f8f9fa;
+      --soft: #f1f3f5;
+      --muted: #495057;
+      --text: #212529;
+      --accent: #4c6ef5;
+      --accent-2: #15aabf;
+      --chip: #e9ecef;
+      --radius: 18px;
+      --shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    body{margin:0; font-family:Inter, sans-serif; background:var(--bg); color:var(--text); line-height:1.55;}
+    .container{max-width:1200px; padding:32px 18px; margin:0 auto}
+    header{display:flex; align-items:center; gap:16px; margin-bottom:10px}
+    .logo{width:42px; height:42px; display:grid; place-items:center; border-radius:12px; background:var(--soft); box-shadow:var(--shadow);}
+    h1{font-size: clamp(24px, 4vw, 36px); margin:0; letter-spacing:.2px}
+    .subtitle{color:var(--muted); margin-top:6px}
+
+    .toolbar{display:flex; gap:10px; flex-wrap:wrap; margin:18px 0}
+    .btn{background:var(--chip); color:var(--text); border:1px solid #dee2e6; padding:8px 12px; border-radius:12px; font-weight:600; cursor:pointer}
+    .btn[aria-pressed="true"], .btn:hover{outline:2px solid rgba(76,110,245,.25)}
+
+    .grid{display:grid; grid-template-columns: 1fr; gap:18px; margin-top:10px}
+    @media(min-width:900px){ .grid{ grid-template-columns: repeat(2, 1fr);} }
+
+    .card{background:var(--card); border:1px solid #dee2e6; padding:18px; border-radius:var(--radius); box-shadow:var(--shadow)}
+    .pill{display:inline-flex; align-items:center; gap:8px; padding:6px 10px; border-radius:999px; background:var(--chip); color:var(--muted); font-size:12px}
+    .title{display:flex; align-items:center; justify-content:space-between; gap:14px}
+    .title h2{font-size:18px; margin:0}
+    .meter{height:10px; background:#e9ecef; border-radius:999px; overflow:hidden}
+    .meter > span{display:block; height:100%; background: linear-gradient(90deg, var(--accent), var(--accent-2));}
+
+    details{border:1px solid #dee2e6; background:var(--soft); border-radius:12px; padding:12px 14px; margin-top:12px}
+    details summary{list-style:none; cursor:pointer; display:flex; align-items:center; gap:10px; color:var(--text); font-weight:600}
+    details summary::-webkit-details-marker{display:none}
+
+    .kv{display:grid; grid-template-columns: 140px 1fr; gap:8px; margin:10px 0}
+    .kv .k{color:var(--muted)}
+    .kv .v{color:var(--text)}
+
+    .section{margin-top:18px}
+    .section h3{margin:.2rem 0 .6rem; font-size:14px; color:var(--muted); text-transform:uppercase}
+
+    .callout{border:1px solid #dee2e6; background:#e7f5ff; border-radius:12px; padding:12px; color:#0c5460}
+    .warn{background:#fff3bf; color:#664d03}
+    .footer{margin-top:26px; color:var(--muted); font-size:12px}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo" aria-hidden="true">🧠</div>
+      <div>
+        <h1>Guide NMDA & Glutamate</h1>
+        <div class="subtitle">Agmatine · NAC · Huperzine A · Lithium Orotate — durée d’action · effets · puissance · mécanismes</div>
+      </div>
+    </header>
+
+    <div class="toolbar" role="toolbar" aria-label="Filtres">
+      <button class="btn" data-filter="all" aria-pressed="true">Tout</button>
+      <button class="btn" data-filter="flash">Flash (action rapide)</button>
+      <button class="btn" data-filter="long">Longue durée</button>
+      <button class="btn" data-filter="calmant">Calmant</button>
+      <button class="btn" data-filter="focus">Focus</button>
+    </div>
+
+    <section class="grid" id="cards">
+      <!-- AGMATINE -->
+      <article class="card" data-tags="flash calmant">
+        <div class="title">
+          <h2>Agmatine</h2>
+          <span class="pill" title="Durée">⏳ 2–4 h</span>
+        </div>
+        <div class="section">
+          <div class="kv"><div class="k">Mécanisme</div><div class="v">Antagoniste <strong>NMDA</strong> direct, modulation <strong>imidazoline</strong>, ↓ glutamate</div></div>
+          <div class="kv"><div class="k">Début d’action</div><div class="v">30–45 min</div></div>
+          <div class="kv"><div class="k">Ressenti</div><div class="v">Filtre sensoriel, clarté immédiate</div></div>
+          <div class="kv"><div class="k">Synergie</div><div class="v">NAC (prolonge), Huperzine A (focus), stimulants faibles</div></div>
+          <div class="kv"><div class="k">Puissance</div>
+            <div class="v"><div class="meter" aria-label="Puissance"><span style="width:100%"></span></div></div>
+          </div>
+        </div>
+        <details>
+          <summary>En savoir plus</summary>
+          <ul>
+            <li>Effets : calme l’hyperexcitabilité, diminue le « bruit » mental.</li>
+            <li>Points forts : puissance immédiate ; idéal pour démarrer la journée.</li>
+            <li>Limites : durée courte — penser à un relais (NAC) au bout de 5–6h.</li>
+          </ul>
+        </details>
+      </article>
+
+      <!-- NAC -->
+      <article class="card" data-tags="long calmant">
+        <div class="title">
+          <h2>NAC (N‑acétyl‑L‑cystéine)</h2>
+          <span class="pill">⏳ 6–10 h</span>
+        </div>
+        <div class="section">
+          <div class="kv"><div class="k">Mécanisme</div><div class="v">↓ glutamate extracellulaire via transporteurs gliaux (<strong>EAAT2</strong>), ↑ glutathion</div></div>
+          <div class="kv"><div class="k">Début d’action</div><div class="v">60–120 min (montée progressive)</div></div>
+          <div class="kv"><div class="k">Ressenti</div><div class="v">Stabilisation, lissage de l’hyperactivité</div></div>
+          <div class="kv"><div class="k">Synergie</div><div class="v">Agmatine (pic), Huperzine A (focus), Magnésium (soir)</div></div>
+          <div class="kv"><div class="k">Puissance</div>
+            <div class="v"><div class="meter"><span style="width:60%"></span></div></div>
+          </div>
+        </div>
+        <details>
+          <summary>En savoir plus</summary>
+          <ul>
+            <li>Effets : anti‑excitotoxicité, protection dopaminergique, anti‑inflammatoire.</li>
+            <li>Points forts : couvre la journée avec 1–2 prises.</li>
+            <li>Note : mucolytique — boire de l’eau ; espacer de 30–45 min des médicaments sensibles.</li>
+          </ul>
+        </details>
+      </article>
+
+      <!-- Huperzine A -->
+      <article class="card" data-tags="long focus">
+        <div class="title">
+          <h2>Huperzine A</h2>
+          <span class="pill">⏳ 8–12 h</span>
+        </div>
+        <div class="section">
+          <div class="kv"><div class="k">Mécanisme</div><div class="v">Inhibition <strong>AChE</strong> (↑ acétylcholine) + protection <strong>NMDA</strong></div></div>
+          <div class="kv"><div class="k">Début d’action</div><div class="v">30–60 min</div></div>
+          <div class="kv"><div class="k">Ressenti</div><div class="v">Focus « laser », mémoire nette</div></div>
+          <div class="kv"><div class="k">Synergie</div><div class="v">Agmatine (calme), NAC (fond) — prise un jour sur deux pour éviter l’accumulation</div></div>
+          <div class="kv"><div class="k">Puissance</div>
+            <div class="v"><div class="meter"><span style="width:60%"></span></div></div>
+          </div>
+        </div>
+        <details>
+          <summary>En savoir plus</summary>
+          <ul>
+            <li>Effets : clarté cognitive soutenue, vigilance sans nervosité.</li>
+            <li>Points forts : couvre la journée avec une seule prise.</li>
+            <li>Attention : peut être trop stimulant chez certains — commencer bas (50–100 µg).</li>
+          </ul>
+        </details>
+      </article>
+
+      <!-- Lithium Orotate -->
+      <article class="card" data-tags="long calmant">
+        <div class="title">
+          <h2>Lithium Orotate</h2>
+          <span class="pill">⏳ ~24 h</span>
+        </div>
+        <div class="section">
+          <div class="kv"><div class="k">Mécanisme</div><div class="v">↓ libération de glutamate, ↑ GABA, neuroprotection (↑ BDNF)</div></div>
+          <div class="kv"><div class="k">Début d’action</div><div class="v">Lent (heures à jours)</div></div>
+          <div class="kv"><div class="k">Ressenti</div><div class="v">Calme de fond, stabilisation émotionnelle</div></div>
+          <div class="kv"><div class="k">Synergie</div><div class="v">Agmatine (pic), NAC (fond), Magnésium (soir)</div></div>
+          <div class="kv"><div class="k">Puissance</div>
+            <div class="v"><div class="meter"><span style="width:50%"></span></div></div>
+          </div>
+        </div>
+        <details>
+          <summary>En savoir plus</summary>
+          <ul>
+            <li>Effets : lissage des pics d’excitation, régulation de l’humeur.</li>
+            <li>Points forts : une prise quotidienne suffit pour une base stable.</li>
+            <li>Attention : rester sur des doses faibles ; en cas de lithium médical — avis pro indispensable.</li>
+          </ul>
+        </details>
+      </article>
+    </section>
+
+    <section class="section">
+      <h3>Conseil d’assemblage « journée complète »</h3>
+      <div class="callout">Matin : <strong>Agmatine</strong> (500–750 mg) + <strong>NAC</strong> (600–1200 mg) · Midi : <strong>NAC</strong> (600 mg) · Optionnel : <strong>Huperzine A</strong> (50–100 µg) pour le focus · Soir : <strong>Magnésium L‑thréonate</strong> (1–2 g).</div>
+    </section>
+
+    <section class="section">
+      <h3>Notes rapides</h3>
+      <div class="callout warn">« Naturel » ≠ « sans risque ». Commencer bas, augmenter progressivement, surveiller les interactions (espacer le NAC de 30–45 min des médicaments sensibles). En cas de traitement ou condition médicale, demander un avis pro.</div>
+    </section>
+
+    <div class="footer">© 2025 — Fiche pédagogique personnelle.</div>
+  </div>
+
+  <script>
+    // Filtrage par tags
+    const buttons = document.querySelectorAll('.btn');
+    const cards = document.querySelectorAll('.card');
+    function setActive(btn){ buttons.forEach(b=>b.setAttribute('aria-pressed','false')); btn.setAttribute('aria-pressed','true'); }
+    function applyFilter(key){
+      cards.forEach(c=>{
+        if(key==='all'){ c.style.display='block'; return; }
+        const tags = (c.dataset.tags||'').split(' ');
+        c.style.display = tags.includes(key) ? 'block' : 'none';
+      });
+    }
+    buttons.forEach(btn=>btn.addEventListener('click', ()=>{ setActive(btn); applyFilter(btn.dataset.filter); }));
+  </script>
+</body>
+</html>
